@@ -1,13 +1,17 @@
 
 
-import React from 'react';
+import React, { use } from 'react';
 
-const countries = () => {
+const Countries = ({countriesPromise}) => {
+    const countriesData= use(countriesPromise);
+    const allCountries =countriesData.countries;
+    console.log(allCountries);
+
     return (
         <div>
-            <h1>in the countries</h1>
+            <h1>in the countries : {allCountries.length} </h1>
         </div>
     );
 };
 
-export default countries;
+export default Countries;
