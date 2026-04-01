@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Country.css'
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountry  }) => {
     // const currencies = country.currencies.currencies;
-    console.log(country);
+    // console.log(country);
     const [visited, setVisited] = useState(false);
     const handelVisited = ()=>{
     //    setVisited(true)
@@ -12,6 +12,7 @@ const Country = ({ country }) => {
     else{
         setVisited(true )
     }
+    handleVisitedCountry(country)
     }
     // console.log(country.currencies.currencies)
     return (
